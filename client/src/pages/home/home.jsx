@@ -30,19 +30,13 @@ const Home = () => {
             trigger: child,
             start: "top top",
             end: "bottom top",
-
             scrub: true,
-            markers: true,
           },
         }
       );
     });
   });
-  const addRef = (el) => {
-    if (!parallaxi.current.includes(el)) {
-      parallaxi.current.push(el);
-    }
-  };
+
   useGSAP(() => {}, []);
   return (
     <PageWrapper>
