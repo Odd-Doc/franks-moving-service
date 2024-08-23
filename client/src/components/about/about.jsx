@@ -1,5 +1,6 @@
 import { useInView } from "react-intersection-observer";
+import { Container } from "./style";
 
 export const About = () => {
-  return <></>;
+  return <Container></Container>;
 };

@@ -1,14 +1,9 @@
-import { SectionTitle } from "../media-query";
-import {
-  Container,
-  Project,
-  ProjectCard,
-  ProjectSynopsis,
-  CallToAction,
-} from "./style";
-import { useInView } from "react-intersection-observer";
-import { ThemeProvider } from "styled-components";
+import { Container } from "./style";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
-export const Projects = () => {
-  <>Services</>;
+export const Services = () => {
+  const container = useRef();
+  return <Container> </Container>;
 };

@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/home";
 import "./App.css";
 import ScrollToTop from "./components/utils/ScrollToTop";
-
 import { ThemeProvider } from "styled-components";
 import theme from "./Theme";
 

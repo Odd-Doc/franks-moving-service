@@ -1,3 +1,5 @@
+import { Container } from "./style";
+
 export const ContactMe = () => {
-  return <></>;
+  return <Container></Container>;
 };
