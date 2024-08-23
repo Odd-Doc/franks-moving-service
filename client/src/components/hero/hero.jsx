@@ -29,7 +29,7 @@ export const Hero = () => {
   // });
 
   return (
-    <Container ref={container} className="hero-container">
+    <Container ref={container} className="container">
       <TransitionLtoR from={"-1000px"} to={"0px"} dur={2} ref={header}>
         <Header className="header">
           <Title className="company-title ubuntu-bold-italic">

@@ -5,5 +5,5 @@ import { useGSAP } from "@gsap/react";
 
 export const Services = () => {
   const container = useRef();
-  return <Container> </Container>;
+  return <Container className="container"> </Container>;
 };
