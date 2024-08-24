@@ -16,7 +16,7 @@ export const FadeIn = ({ children, vars }) => {
   return <span ref={el}>{children}</span>;
 };
 
-export const TransitionLtoR = forwardRef(({ children, ...props }, ref) => {
+export const SlideIn = forwardRef(({ children, ...props }, ref) => {
   const el = useRef();
   const animation = useRef();
 
@@ -37,7 +37,11 @@ export const TransitionLtoR = forwardRef(({ children, ...props }, ref) => {
     }
   }, [ref]);
 
-  return <span ref={el}>{children}</span>;
+  return (
+    <div style={{ display: "flex" }} ref={el}>
+      {children}
+    </div>
+  );
 });
 
 //   const el = useRef();

@@ -15,16 +15,18 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
+  const parallaxi = useRef();
   const container = useRef();
-  const parallaxi = useRef([]);
   useGSAP(() => {
-    // [...container.current.children].forEach((e, i) => {});
-    [...container.current.children].forEach((child, i) => {
+    ScrollTrigger.refresh();
+
+    [...parallaxi.current.children].forEach((child, i) => {
       gsap.fromTo(
         child,
         { yPercent: 0 },
         {
           yPercent: 20,
+
           scrollTrigger: {
             id: `section-${i + 1}`,
             trigger: child,
@@ -35,16 +37,15 @@ const Home = () => {
         }
       );
     });
-  });
+  }, []);
 
   useGSAP(() => {}, []);
   return (
-    <PageWrapper>
-      {" "}
+    <PageWrapper ref={container}>
       <div>
         <Hero />
       </div>
-      <div className="parallax-wrapper" ref={container}>
+      <div ref={parallaxi}>
         <div>
           <Services />
         </div>
