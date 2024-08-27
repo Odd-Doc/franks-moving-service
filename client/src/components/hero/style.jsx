@@ -15,7 +15,9 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-
+  .ui.header {
+    font-family: "Montserrat", sans-serif;
+  }
   h1.ui.header {
     font-size: 4rem;
     font-weight: "normal";
@@ -38,7 +40,7 @@ export const Container = styled.div`
       font-size: 3rem;
       color: ${(props) => props.theme.colors.redpantone};
       ${media.sm`
-      font-size:1.4rem;
+      font-size:2rem;
       `}
     }
     ${media.sm`
