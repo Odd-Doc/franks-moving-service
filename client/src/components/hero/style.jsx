@@ -2,6 +2,8 @@ import styled from "styled-components";
 import heroBg from "../../assets/images/franks-landing.jpg";
 import heroBgDark from "../../assets/images/franks-landing-dark.jpg";
 import heroBgSm from "../../assets/images/franks-landing-small.jpg";
+import heroBgSmDark from "../../assets/images/franks-landing-small-dark.jpg";
+
 import { media } from "../media-query";
 
 export const Container = styled.div`
@@ -12,32 +14,38 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+
   h1.ui.header {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: "normal";
+    padding: 1rem;
     margin: 0;
     color: ${(props) => props.theme.colors.honeydew};
 
     ${media.sm`
-      font-size:2rem;
+      font-size:3rem;
     `}
   }
   h2.ui.header {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: "normal";
     margin: 0;
     color: ${(props) => props.theme.colors.honeydew};
     padding-top: 20px;
+
+    padding: 1rem;
     .header-span {
       font-size: 1.9rem;
       color: ${(props) => props.theme.colors.redpantone};
     }
     ${media.sm`
-      font-size:1rem;
+      font-size:1.4rem;
     `}
   }
   ${media.sm`
-  background-image: url(${heroBgSm});
+  background-image: url(${heroBgSmDark});
+  background-position: 150%;
   `}
 `;
 //  font-size: `${media.sm}` ? "2rem" : "3rem"; */

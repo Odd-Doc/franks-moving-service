@@ -2,12 +2,19 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { forwardRef, useRef } from "react";
 
-export const FadeIn = forwardRef(({ children, ...props }, ref) => {
+export const FromTo = forwardRef(({ children, ...props }, ref) => {
   const el = useRef();
   const animation = useRef();
 
   useGSAP(() => {
-    animation.current = gsap.fromTo(el.current.children, props.from, props.to);
+    let mm = gsap.matchMedia();
+    mm.add("(min-width:500px)", () => {
+      animation.current = gsap.fromTo(
+        el.current.children,
+        props.from,
+        props.to
+      );
+    });
   }, []);
 
   useGSAP(() => {

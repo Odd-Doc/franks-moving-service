@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import { SlideIn } from "../Animations/slideIn";
 import { Header } from "semantic-ui-react";
 import { media } from "../media-query";
+import { FromTo } from "../Animations/fromToAnimate";
 
 export const Hero = () => {
   const header = useRef();
@@ -13,15 +14,15 @@ export const Hero = () => {
     <>
       {" "}
       <Container ref={container} className="container">
-        <SlideIn from={"-1000px"} to={"0px"} dur={2} ref={header}>
+        <FromTo from={{ x: "-1000px" }} to={{ x: "-200px", duration: "1.5" }}>
           <Header as="h1" content="Franks Relocation" />
-        </SlideIn>
-        <SlideIn from={"1000px"} to={"0px"} dur={2} ref={header}>
+        </FromTo>
+        <FromTo from={{ x: "1000px" }} to={{ x: "200px", duration: "1.5" }}>
           <Header as="h2">
             Moving made <span className="header-span">easy</span>, so you can
             focus on what matters most.
           </Header>
-        </SlideIn>
+        </FromTo>
       </Container>
     </>
   );

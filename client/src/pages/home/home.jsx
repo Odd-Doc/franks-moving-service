@@ -12,7 +12,7 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SlideIn } from "../../components/Animations/slideIn";
-import { FadeIn } from "../../components/Animations/fadeIn";
+import { FromTo } from "../../components/Animations/fromToAnimate";
 import { QuoteModal } from "../../components/QuoteReq/GetAQuote";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -46,14 +46,14 @@ const Home = () => {
     <>
       {" "}
       <PageWrapper ref={container}>
-        <QuoteRequestButton className="quote-button-slide">
+        {/* <QuoteRequestButton className="quote-button-slide">
           <FadeIn
             from={{ y: "100px", opacity: "0" }}
             to={{ y: "-300px", opacity: "1", duration: "1" }}
           >
             <QuoteModal />
           </FadeIn>
-        </QuoteRequestButton>
+        </QuoteRequestButton> */}
         <div>
           <Hero />
         </div>
