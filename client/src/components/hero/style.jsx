@@ -33,11 +33,13 @@ export const Container = styled.div`
     margin: 0;
     color: ${(props) => props.theme.colors.honeydew};
     padding-top: 20px;
-
     padding: 1rem;
     .header-span {
-      font-size: 1.9rem;
+      font-size: 3rem;
       color: ${(props) => props.theme.colors.redpantone};
+      ${media.sm`
+      font-size:1.4rem;
+      `}
     }
     ${media.sm`
       font-size:1.4rem;

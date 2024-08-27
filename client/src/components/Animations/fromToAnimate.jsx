@@ -13,6 +13,14 @@ export const FromTo = forwardRef(({ children, ...props }, ref) => {
 
   useGSAP(() => {
     let mm = gsap.matchMedia();
+    // let from = {
+    //   x: props.from.x,
+    //   y: props.from.y,
+    // };
+    // let to = {
+    //   x: props.to.x,
+    //   y: props.to.y,
+    // };
     mm.add(
       {
         // set up any number of conditions. The function below will be called when ANY of them match.
@@ -21,14 +29,11 @@ export const FromTo = forwardRef(({ children, ...props }, ref) => {
         isMobile: `(max-width: ${screenSizes.small}px)`,
       },
       (context) => {
-        if (context.conditions.isDesktop) {
-          animation.current = gsap.fromTo(
-            el.current.children,
-            props.from,
-            props.to
-          );
-        }
-
+        animation.current = gsap.fromTo(
+          el.current.children,
+          props.from,
+          props.to
+        );
         // if (context.conditions.isDesktop) {
         //   console.clear();
         //   console.log("desktop");
