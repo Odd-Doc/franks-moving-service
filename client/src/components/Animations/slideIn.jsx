@@ -2,20 +2,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { forwardRef, useRef } from "react";
 
-export const FadeIn = ({ children, vars }) => {
-  const el = useRef();
-
-  useGSAP(() => {
-    animation.current = gsap.from(el.current.children, {
-      opacity: 0,
-      stagger,
-      x,
-    });
-  });
-
-  return <span ref={el}>{children}</span>;
-};
-
 export const SlideIn = forwardRef(({ children, ...props }, ref) => {
   const el = useRef();
   const animation = useRef();

@@ -4,22 +4,25 @@ import { Navbar } from "../../components/navbar/navbar";
 import { ContactMe } from "../../components/contactMe/contactMe";
 import { Outlet } from "react-router-dom";
 import { Footer } from "../../components/footer/footer";
-import { PageWrapper } from "./style";
+import { PageWrapper, QuoteRequestButton } from "./style";
 import { Hero } from "../../components/hero/hero";
 import { Services } from "../../components/services/services";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SlideIn } from "../../components/Animations/slideIn";
+import { FadeIn } from "../../components/Animations/fadeIn";
+import { QuoteModal } from "../../components/QuoteReq/GetAQuote";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
   const parallaxi = useRef();
   const container = useRef();
+  const quoteRef = useRef();
   useGSAP(() => {
     ScrollTrigger.refresh();
-
     [...parallaxi.current.children].forEach((child, i) => {
       gsap.fromTo(
         child,
@@ -39,24 +42,34 @@ const Home = () => {
     });
   }, []);
 
-  useGSAP(() => {}, []);
   return (
-    <PageWrapper ref={container}>
-      <div>
-        <Hero />
-      </div>
-      <div ref={parallaxi}>
+    <>
+      {" "}
+      <PageWrapper ref={container}>
+        <QuoteRequestButton className="quote-button-slide">
+          <FadeIn
+            from={{ y: "100px", opacity: "0" }}
+            to={{ y: "-300px", opacity: "1", duration: "1" }}
+          >
+            <QuoteModal />
+          </FadeIn>
+        </QuoteRequestButton>
         <div>
-          <Services />
+          <Hero />
         </div>
-        <div>
-          <About />
+        <div ref={parallaxi}>
+          <div>
+            <Services />
+          </div>
+          <div>
+            <About />
+          </div>
+          <div>
+            <ContactMe />
+          </div>
         </div>
-        <div>
-          <ContactMe />
-        </div>
-      </div>
-    </PageWrapper>
+      </PageWrapper>
+    </>
   );
 };
 export default Home;

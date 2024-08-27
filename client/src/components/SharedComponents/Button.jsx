@@ -1,5 +1,2 @@
 import styled from "styled-components";
-
-const Button = styled.button``;
-
-export default Button;
+import { Button as SemanticButton } from "semantic-ui-react";
