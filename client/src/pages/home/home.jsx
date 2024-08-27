@@ -46,14 +46,14 @@ const Home = () => {
     <>
       {" "}
       <PageWrapper ref={container}>
-        {/* <QuoteRequestButton className="quote-button-slide">
-          <FadeIn
+        <QuoteRequestButton className="quote-button-slide">
+          <FromTo
             from={{ y: "100px", opacity: "0" }}
-            to={{ y: "-300px", opacity: "1", duration: "1" }}
+            to={{ y: "-100px", opacity: "1", duration: "1" }}
           >
             <QuoteModal />
-          </FadeIn>
-        </QuoteRequestButton> */}
+          </FromTo>
+        </QuoteRequestButton>
         <div>
           <Hero />
         </div>

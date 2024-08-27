@@ -20,3 +20,9 @@ export const StyledForm = styled.form`
     gap: 1rem;
   }
 `;
+export const ModalWrapper = styled.div`
+  .ui.huge.button {
+    background-color: ${(props) => props.theme.colors.redpantone};
+    color: ${(props) => props.theme.colors.honeydew};
+  }
+`;
