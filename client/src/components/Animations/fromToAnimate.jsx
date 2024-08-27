@@ -5,16 +5,43 @@ import { forwardRef, useRef } from "react";
 export const FromTo = forwardRef(({ children, ...props }, ref) => {
   const el = useRef();
   const animation = useRef();
+  const screenSizes = {
+    small: 400,
+    medium: 800,
+    large: 1024,
+  };
 
   useGSAP(() => {
     let mm = gsap.matchMedia();
-    mm.add("(min-width:500px)", () => {
-      animation.current = gsap.fromTo(
-        el.current.children,
-        props.from,
-        props.to
-      );
-    });
+    mm.add(
+      {
+        // set up any number of conditions. The function below will be called when ANY of them match.
+        isDesktop: `(min-width: ${screenSizes.large + 1}px)`,
+        isTablet: `(min-width: ${screenSizes.small + 1}px)`,
+        isMobile: `(max-width: ${screenSizes.small}px)`,
+      },
+      (context) => {
+        if (context.conditions.isDesktop) {
+          animation.current = gsap.fromTo(
+            el.current.children,
+            props.from,
+            props.to
+          );
+        }
+
+        // if (context.conditions.isDesktop) {
+        //   console.clear();
+        //   console.log("desktop");
+        // } else if (context.conditions.isTablet) {
+        //   console.clear();
+        //   console.log("tablet");
+        // } else if (context.conditions.isMobile) {
+        //   console.clear();
+        //   console.log("mobile");
+        // }
+      }
+    );
+    return () => mm.revert();
   }, []);
 
   useGSAP(() => {
