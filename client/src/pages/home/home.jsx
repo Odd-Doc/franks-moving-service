@@ -23,26 +23,26 @@ const Home = () => {
   const parallaxi = useRef();
   const container = useRef();
   const quoteRef = useRef();
-  useGSAP(() => {
-    ScrollTrigger.refresh();
-    [...parallaxi.current.children].forEach((child, i) => {
-      gsap.fromTo(
-        child,
-        { yPercent: 0 },
-        {
-          yPercent: 20,
+  // useGSAP(() => {
+  //   ScrollTrigger.refresh();
+  //   [...parallaxi.current.children].forEach((child, i) => {
+  //     gsap.fromTo(
+  //       child,
+  //       { yPercent: 0 },
+  //       {
+  //         yPercent: 20,
 
-          scrollTrigger: {
-            id: `section-${i + 1}`,
-            trigger: child,
-            start: "top top",
-            end: "bottom top",
-            scrub: true,
-          },
-        }
-      );
-    });
-  }, []);
+  //         scrollTrigger: {
+  //           id: `section-${i + 1}`,
+  //           trigger: child,
+  //           start: "top top",
+  //           end: "bottom top",
+  //           scrub: true,
+  //         },
+  //       }
+  //     );
+  //   });
+  // }, []);
 
   return (
     <>
@@ -59,20 +59,20 @@ const Home = () => {
         <div>
           <Hero />
         </div>
-        <div ref={parallaxi}>
-          <div>
-            <Services />
-          </div>
-          <div>
-            <ServiceDetails />
-          </div>
-          <div>
-            <About />
-          </div>
-          <div>
-            <ContactMe />
-          </div>
+        {/* <div ref={parallaxi}> */}
+        <div>
+          <Services />
         </div>
+        <div>
+          <ServiceDetails />
+        </div>
+        <div>
+          <About />
+        </div>
+        <div>
+          <ContactMe />
+        </div>
+        {/* </div> */}
       </PageWrapper>
     </>
   );

@@ -12,8 +12,9 @@ const theme = {
     saffron: "#e9c46aff",
     sandybrown: "#f4a261ff",
     burntsienna: "#e76f51ff",
+    offwhite: "#ebebeb",
   },
-  fonts: ["sans-sarif", "Montserrat"],
+  fonts: ["Ubuntu", "system-ui"],
   fontSizes: {
     small: "1em",
     medium: "2em",
