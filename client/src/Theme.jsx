@@ -14,7 +14,6 @@ const theme = {
     burntsienna: "#e76f51ff",
     offwhite: "#ebebeb",
   },
-  fonts: ["Ubuntu", "system-ui"],
   fontSizes: {
     small: "1em",
     medium: "2em",
