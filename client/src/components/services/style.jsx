@@ -11,7 +11,7 @@ export const Service = styled.div`
   color: white;
 `;
 export const Container = styled.div`
-  background-color: ${(props) => props.theme.colors.nonphotoblue};
+  background-color: ${(props) => props.theme.colors.charcoal};
 
   flex-direction: column;
   z-index: 1;

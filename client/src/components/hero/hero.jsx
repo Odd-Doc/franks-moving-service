@@ -27,18 +27,3 @@ export const Hero = () => {
     </>
   );
 };
-// "At Frank Relocation, our mission is to provide reliable, efficient,
-//           and stress-free moving services to our community. We are committed to
-//           treating every customer with respect and care, ensuring that their
-//           belongings are handled with the utmost professionalism. Our goal is to
-//           make every move a positive experience by delivering exceptional
-//           service, fostering trust, and supporting our clients through every
-//           step of their journey."
-////////////////////////////////////////////////////////////////////////////////
-// Moving made easy, so you can focus on what matters most
-////////////////////////////////////////////////////////////////////////////////
-// "Moving made easy—your local experts for a smooth and stress-free transition.";
-////////////////////////////////////////////////////////////////////////////////
-// "Relocating made easy—because your move should be as smooth as your new beginning.";
-////////////////////////////////////////////////////////////////////////////////
-// "Moving made simple—because your move is our mission."

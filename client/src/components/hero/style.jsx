@@ -23,7 +23,6 @@ export const Container = styled.div`
     font-weight: "normal";
     padding: 1rem;
     margin: 0;
-    /* color: ${(props) => props.theme.colors.honeydew}; */
     color: white;
 
     ${media.sm`
@@ -34,13 +33,12 @@ export const Container = styled.div`
     font-size: 2rem;
     font-weight: "normal";
     margin: 0;
-    /* color: ${(props) => props.theme.colors.honeydew}; */
     color: white;
     padding-top: 20px;
     padding: 1rem;
     .header-span {
       font-size: 3rem;
-      color: ${(props) => props.theme.colors.redpantone};
+      color: ${(props) => props.theme.colors.burntsienna};
       ${media.sm`
       font-size:2rem;
       `}
@@ -54,10 +52,7 @@ export const Container = styled.div`
   background-position: 150%;
   `}
 `;
-//  font-size: `${media.sm}` ? "2rem" : "3rem"; */
-//             font-weight: "normal";
-//             margin-bottom: 0;
-//              margin-top: `${media.sm}` ? "1.5em" : "3em";
+
 export const TitleWrapper = styled.div`
   color: white;
   top: 60px;
@@ -70,7 +65,6 @@ export const TitleWrapper = styled.div`
 export const Title = styled.h1`
   border-radius: 0px 12px 12px 0px;
   margin: 0;
-
   display: inline-block;
   font-size: 5em;
 `;
