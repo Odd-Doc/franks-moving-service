@@ -2,7 +2,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Ubuntu", system-ui !important;
 }
 .ubuntu-light {
   font-family: "Ubuntu", sans-serif;
@@ -58,4 +58,7 @@ button.ui.vk.huge.button {
   position: sticky;
   top: 10px;
   align-self: flex-start;
+}
+.ui {
+  font-family: "Ubuntu", system-ui !important;
 }
