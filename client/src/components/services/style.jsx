@@ -12,7 +12,7 @@ export const Service = styled.div`
 `;
 export const Container = styled.div`
   background-color: ${(props) => props.theme.colors.charcoal};
-
+  padding: 2rem;
   flex-direction: column;
   z-index: 1;
 
@@ -25,11 +25,16 @@ export const Title = styled.h3`
 `;
 export const Content = styled.div``;
 export const StyledLink = styled(HashLink)`
+  display: flex;
+  flex-direction: column;
   color: white;
   i {
     color: ${(props) => props.theme.colors.nonphotoblue};
   }
   .fa-building {
-    color: red;
   }
+`;
+export const ServiceLinksWrapper = styled.div`
+  display: flex;
+  gap: 1rem;
 `;
