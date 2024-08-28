@@ -7,7 +7,7 @@ export const ServiceDetails = () => {
   return (
     <Container className="container">
       <Service>
-        <Title className="service-title .ubuntu-bold">
+        <Title className="service-title ubuntu-bold">
           Residential Moving
           {/* <hr /> */}
         </Title>
@@ -18,8 +18,8 @@ export const ServiceDetails = () => {
         home.
       </Service>
       <Service>
-        <Title className="service-title">
-          Commercial Office Moving
+        <Title className="service-title ubuntu-bold">
+          Office Moving
           {/* <hr /> */}
         </Title>
         Our professional office moving service is designed to ensure a seamless
@@ -28,7 +28,7 @@ export const ServiceDetails = () => {
         comprehensive solutions tailored to meet your specific needs.
       </Service>
       <Service>
-        <Title className="service-title">
+        <Title className="service-title ubuntu-bold">
           Packing Services
           {/* <hr /> */}
         </Title>
@@ -40,7 +40,7 @@ export const ServiceDetails = () => {
       </Service>
 
       <Service>
-        <Title className="service-title">
+        <Title className="service-title ubuntu-bold">
           Loading and Unloading
           {/* <hr /> */}
         </Title>
