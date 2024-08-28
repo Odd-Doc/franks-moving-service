@@ -1,6 +1,7 @@
 import par1 from "../../assets/images/parallax-bg-1.png";
 import styled from "styled-components";
 import { HashLink } from "react-router-hash-link";
+import { mediaQuery } from "../media-query";
 export const Service = styled.div`
   font-size: 1.2rem;
   display: flex;
@@ -20,21 +21,48 @@ export const Container = styled.div`
   }
 `;
 export const Title = styled.h3`
-  font-size: 2rem;
+  font-size: 4rem;
+
   color: white;
 `;
-export const Content = styled.div``;
+export const Content = styled.div`
+  .service-summary {
+    font-size: 1.5rem;
+    color: white;
+  }
+`;
 export const StyledLink = styled(HashLink)`
   display: flex;
   flex-direction: column;
+  text-align: center;
+  gap: 1rem;
   color: white;
   i {
+    font-size: 5rem;
     color: ${(props) => props.theme.colors.nonphotoblue};
+    ${mediaQuery.sm`
+      
+    `}
+  }
+  p {
+    font-size: 1.5rem;
+    color: ${(props) => props.theme.colors.nonphotoblue};
+    ${mediaQuery.sm`
+      
+    `}
   }
   .fa-building {
   }
 `;
 export const ServiceLinksWrapper = styled.div`
+  padding-top: 25px;
+  padding-bottom: 25px;
+
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+  ${mediaQuery.sm`
+      
+    `}
 `;

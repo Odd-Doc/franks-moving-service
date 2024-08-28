@@ -10,7 +10,7 @@ const device = {
   xxl: "1920px",
 };
 
-export const media = {
+export const mediaQuery = {
   xs: (...args) => css`
     @media (max-width: ${device.xs}) {
       ${css(...args)};

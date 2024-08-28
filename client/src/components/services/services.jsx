@@ -13,7 +13,7 @@ import { useGSAP } from "@gsap/react";
 export const Services = () => {
   return (
     <Container className="container">
-      <Title>Full Service Movers</Title>
+      <Title className="ubuntu-bold ">Full Service Movers</Title>
       <Content>
         <p className="service-summary">
           Our moving company offers a wide range of services to meet all your
@@ -26,27 +26,26 @@ export const Services = () => {
         <ServiceLinksWrapper>
           <StyledLink>
             <i className="fa-solid fa-house"></i>
-            Residental Moving
+            <p>Residental Moving</p>
           </StyledLink>
-
           <StyledLink>
             <i className="fa-solid fa-building"></i>
-            Apartments
+            <p>Apartments</p>
           </StyledLink>
 
           <StyledLink>
             <i className="fa-solid fa-dolly"></i>
-            Commercial Offices
+            <p>Commercial Offices</p>
           </StyledLink>
 
           <StyledLink>
             <i className="fa-solid fa-boxes-packing"></i>
-            Packing
+            <p>Packing</p>
           </StyledLink>
 
           <StyledLink>
             <i className="fa-solid fa-people-carry-box"></i>
-            Pickup and Delivery
+            <p>Pickup and Delivery</p>
           </StyledLink>
         </ServiceLinksWrapper>
       </Content>

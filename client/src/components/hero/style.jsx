@@ -3,8 +3,7 @@ import heroBg from "../../assets/images/franks-landing.jpg";
 import heroBgDark from "../../assets/images/franks-landing-dark.jpg";
 import heroBgSm from "../../assets/images/franks-landing-small.jpg";
 import heroBgSmDark from "../../assets/images/franks-landing-small-dark.jpg";
-
-import { media } from "../media-query";
+import { mediaQuery } from "../media-query";
 
 export const Container = styled.div`
   height: 100vh;
@@ -25,7 +24,7 @@ export const Container = styled.div`
     margin: 0;
     color: white;
 
-    ${media.sm`
+    ${mediaQuery.sm`
       font-size:3rem;
     `}
   }
@@ -39,15 +38,15 @@ export const Container = styled.div`
     .header-span {
       font-size: 3rem;
       color: ${(props) => props.theme.colors.burntsienna};
-      ${media.sm`
+      ${mediaQuery.sm`
       font-size:2rem;
       `}
     }
-    ${media.sm`
+    ${mediaQuery.sm`
       font-size:1.4rem;
     `}
   }
-  ${media.sm`
+  ${mediaQuery.sm`
   background-image: url(${heroBgSmDark});
   background-position: 150%;
   `}
@@ -57,7 +56,7 @@ export const TitleWrapper = styled.div`
   color: white;
   top: 60px;
   position: absolute;
-  ${media.sm`
+  ${mediaQuery.sm`
     
 
   `}

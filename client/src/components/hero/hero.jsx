@@ -2,7 +2,7 @@ import { Container, Title, TitleWrapper } from "./style";
 import React, { useRef } from "react";
 import { SlideIn } from "../Animations/slideIn";
 import { Header } from "semantic-ui-react";
-import { media } from "../media-query";
+
 import { FromTo } from "../Animations/fromToAnimate";
 
 export const Hero = () => {
