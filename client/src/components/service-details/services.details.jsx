@@ -7,7 +7,7 @@ export const ServiceDetails = () => {
   return (
     <Container className="container">
       <Service>
-        <Title className="service-title">
+        <Title className="service-title .ubuntu-bold">
           Residential Moving
           {/* <hr /> */}
         </Title>

@@ -17,6 +17,7 @@ export const Container = styled.div`
   background-color: ${(props) => props.theme.colors.offwhite};
   flex-direction: column;
   ${Title} {
+    font-size: 2em;
   }
   hr {
   }
