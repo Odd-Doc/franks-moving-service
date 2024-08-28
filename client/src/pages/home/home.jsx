@@ -6,7 +6,7 @@ import { Outlet } from "react-router-dom";
 import { Footer } from "../../components/footer/footer";
 import { PageWrapper, QuoteRequestButton } from "./style";
 import { Hero } from "../../components/hero/hero";
-import { Services } from "../../components/services/services";
+
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
@@ -14,6 +14,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SlideIn } from "../../components/Animations/slideIn";
 import { FromTo } from "../../components/Animations/fromToAnimate";
 import { QuoteModal } from "../../components/QuoteReq/GetAQuote";
+import { ServiceDetails } from "../../components/service-details/services.details";
+import { Services } from "../../components/services/services";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -60,6 +62,9 @@ const Home = () => {
         <div ref={parallaxi}>
           <div>
             <Services />
+          </div>
+          <div>
+            <ServiceDetails />
           </div>
           <div>
             <About />

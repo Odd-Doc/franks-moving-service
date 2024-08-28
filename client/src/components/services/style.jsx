@@ -1,8 +1,35 @@
 import par1 from "../../assets/images/parallax-bg-1.png";
 import styled from "styled-components";
-
+import { HashLink } from "react-router-hash-link";
+export const Service = styled.div`
+  font-size: 1.2rem;
+  display: flex;
+  text-align: center;
+  line-height: 3rem;
+  padding: 2rem;
+  display: block;
+  color: white;
+`;
 export const Container = styled.div`
-  height: 100vh;
-  background-image: url(${par1});
-  background-size: cover;
+  background-color: ${(props) => props.theme.colors.nonphotoblue};
+
+  flex-direction: column;
+  z-index: 1;
+
+  hr {
+  }
+`;
+export const Title = styled.h3`
+  font-size: 2rem;
+  color: white;
+`;
+export const Content = styled.div``;
+export const StyledLink = styled(HashLink)`
+  color: white;
+  i {
+    color: ${(props) => props.theme.colors.nonphotoblue};
+  }
+  .fa-building {
+    color: red;
+  }
 `;
