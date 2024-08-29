@@ -1,6 +1,7 @@
 import par1 from "../../assets/images/parallax-bg-1.png";
 import styled from "styled-components";
 import movingCouch from "../../assets/images/moving-couch.jpg";
+import officeMove from "../../assets/images/office-move.jpg";
 import apartmentMove from "../../assets/images/moving-apartment.jpg";
 import { mediaQuery } from "../media-query";
 export const Content = styled.div`
@@ -24,6 +25,7 @@ export const Service = styled.div`
 
 export const Title = styled.h3`
   font-size: 2rem;
+  padding-bottom: 1rem;
 `;
 export const Container = styled.div`
   background-color: ${(props) => props.theme.colors.saffron};
@@ -59,7 +61,10 @@ export const Container = styled.div`
     background-image: url(${apartmentMove});
     background-position: 83%;
   }
-
+  #service-img3 {
+    background-image: url(${officeMove});
+    background-position: 60%;
+  }
   :nth-child(even).service-img-container.screen-lg {
     margin-left: -100px;
   }

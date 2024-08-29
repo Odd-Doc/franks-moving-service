@@ -61,7 +61,7 @@ export const ServiceDetails = () => {
       <Service>
         <ServiceDescription>
           <div className="service-img-container">
-            <ServicesImage id="service-img1" />
+            <ServicesImage id="service-img3" />
           </div>
           <Content>
             <Title className="service-title ubuntu-bold">Office Moving</Title>
@@ -73,17 +73,28 @@ export const ServiceDetails = () => {
           </Content>
         </ServiceDescription>
       </Service>
-      {/*      
       <Service>
-        <Title className="service-title ubuntu-bold">Packing Services</Title>
         <ServiceDescription>
-          packing service ensures your belongings are carefully and efficiently
-          packed for a stress-free move. Whether you need full-service packing,
-          where we handle everything from your fragile items to everyday
-          essentials, or just assistance with specific items, our experienced
-          team is equipped to protect your possessions.
+          <div className="service-img-container screen-md">
+            <ServicesImage id="service-img2" />
+          </div>
+          <Content>
+            <Title className="service-title ubuntu-bold">
+              Packing Services
+            </Title>
+            Our packing services ensures your belongings are carefully and
+            efficiently packed for a stress-free move. Whether you need
+            full-service packing, where we handle everything from your fragile
+            items to everyday essentials, or just assistance with specific
+            items, our experienced team is equipped to protect your possessions.
+          </Content>{" "}
+          <div className="service-img-container screen-lg">
+            <ServicesImage id="service-img2" />
+          </div>
         </ServiceDescription>
       </Service>
+      {/*      
+     
       <Service>
         <Title className="service-title ubuntu-bold">
           Loading and Unloading
