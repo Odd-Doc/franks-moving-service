@@ -32,6 +32,9 @@ export const ServiceDetails = () => {
       </Service>
       <Service>
         <ServiceDescription>
+          <div className="service-img-container screen-md">
+            <ServicesImage id="service-img2" />
+          </div>
           <Content>
             <Title className="service-title ubuntu-bold">Apartments</Title>
             Dont worry, there are{" "}
@@ -50,7 +53,7 @@ export const ServiceDetails = () => {
             team is here to handle every aspect of your move with care and
             efficiency.
           </Content>{" "}
-          <div className="service-img-container">
+          <div className="service-img-container screen-lg">
             <ServicesImage id="service-img2" />
           </div>
         </ServiceDescription>
