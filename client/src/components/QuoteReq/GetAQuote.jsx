@@ -51,18 +51,13 @@ export const QuoteModal = () => {
   return (
     <ModalWrapper>
       <Modal
-        id="ii"
-        className="modal-i"
         onClose={() => setFirstOpen(false)}
         onOpen={() => setFirstOpen(true)}
         open={firstOpen}
         trigger={
           <Button
             size="huge"
-            style={{
-              backgroundColor: "#e76f51ff",
-              color: "white",
-            }}
+            style={{ backgroundColor: "#e76f51ff", color: "white" }}
             onClick={() => setFirstOpen(true)}
           >
             Get a Quote

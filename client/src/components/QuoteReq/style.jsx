@@ -20,6 +20,7 @@ export const StyledForm = styled.form`
     gap: 1rem;
   }
 `;
+
 export const ModalWrapper = styled.div`
   padding-bottom: 150px;
   & #ii {
