@@ -58,15 +58,23 @@ export const ServiceDetails = () => {
           </div>
         </ServiceDescription>
       </Service>
-      {/* <Service>
-        <Title className="service-title ubuntu-bold">Office Moving</Title>
+      <Service>
         <ServiceDescription>
-          Our professional office moving service is designed to ensure a
-          seamless and stress-free relocation for businesses of all sizes. We
-          understand that minimizing downtime and disruption is critical, so we
-          offer comprehensive solutions tailored to meet your specific needs.
+          <div className="service-img-container">
+            <ServicesImage id="service-img1" />
+          </div>
+          <Content>
+            <Title className="service-title ubuntu-bold">Office Moving</Title>
+            Our professional office moving service is designed to ensure a
+            seamless and stress-free relocation for businesses of all sizes. We
+            understand that minimizing downtime and disruption is critical, so
+            we offer comprehensive solutions tailored to meet your specific
+            needs.
+          </Content>
         </ServiceDescription>
       </Service>
+      {/* <Service>
+      
       <Service>
         <Title className="service-title ubuntu-bold">Packing Services</Title>
         <ServiceDescription>
