@@ -73,8 +73,7 @@ export const ServiceDetails = () => {
           </Content>
         </ServiceDescription>
       </Service>
-      {/* <Service>
-      
+      {/*      
       <Service>
         <Title className="service-title ubuntu-bold">Packing Services</Title>
         <ServiceDescription>
