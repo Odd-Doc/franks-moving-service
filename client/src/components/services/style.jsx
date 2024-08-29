@@ -22,7 +22,6 @@ export const Container = styled.div`
 `;
 export const Title = styled.h3`
   font-size: 4rem;
-
   color: white;
 `;
 export const Content = styled.div`
@@ -36,28 +35,39 @@ export const StyledLink = styled(HashLink)`
   flex-direction: column;
   text-align: center;
   gap: 1rem;
-  color: white;
+
   i {
     font-size: 5rem;
-    color: ${(props) => props.theme.colors.nonphotoblue};
     ${mediaQuery.sm`
       
     `}
   }
   p {
     font-size: 1.5rem;
-    color: ${(props) => props.theme.colors.nonphotoblue};
+    color: white;
     ${mediaQuery.sm`
       
-    `}
+    `};
+  }
+  .fa-house {
+    /* color: ${(props) => props.theme.colors.burntsienna}; */
   }
   .fa-building {
+    color: ${(props) => props.theme.colors.persiangreen};
+  }
+  .fa-dolly {
+    color: ${(props) => props.theme.colors.saffron};
+  }
+  .fa-boxes-packing {
+    color: ${(props) => props.theme.colors.sandybrown};
+  }
+  .fa-people-carry-box {
+    color: ${(props) => props.theme.colors.burntsienna};
   }
 `;
 export const ServiceLinksWrapper = styled.div`
   padding-top: 25px;
   padding-bottom: 25px;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
