@@ -18,6 +18,16 @@ export const ServicesImage = styled.div`
   border-radius: 100%;
   background-size: cover;
   box-shadow: 5px 0px 20px #2e2e2e;
+  ${mediaQuery.md`
+  border-radius: 5%;
+  width: 500px;
+      
+    `}
+  ${mediaQuery.sm`
+  border-radius: 5%;
+  width: 300px;
+  height: 300px;
+    `}
 `;
 export const Service = styled.div`
   font-size: 1.2rem;
