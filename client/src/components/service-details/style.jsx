@@ -3,6 +3,8 @@ import styled from "styled-components";
 import movingCouch from "../../assets/images/moving-couch.jpg";
 import officeMove from "../../assets/images/office-move.jpg";
 import apartmentMove from "../../assets/images/moving-apartment.jpg";
+import packing from "../../assets/images/move-packing.jpg";
+
 import { mediaQuery } from "../media-query";
 export const Content = styled.div`
   background-color: ${(props) => props.theme.colors.persiangreen};
@@ -64,6 +66,10 @@ export const Container = styled.div`
   #service-img3 {
     background-image: url(${officeMove});
     background-position: 60%;
+  }
+  #service-img4 {
+    background-image: url(${packing});
+    background-position: 40%;
   }
   :nth-child(even).service-img-container.screen-lg {
     margin-left: -100px;

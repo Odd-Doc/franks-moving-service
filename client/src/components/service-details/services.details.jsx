@@ -76,7 +76,7 @@ export const ServiceDetails = () => {
       <Service>
         <ServiceDescription>
           <div className="service-img-container screen-md">
-            <ServicesImage id="service-img2" />
+            <ServicesImage id="service-img4" />
           </div>
           <Content>
             <Title className="service-title ubuntu-bold">
@@ -89,7 +89,7 @@ export const ServiceDetails = () => {
             items, our experienced team is equipped to protect your possessions.
           </Content>{" "}
           <div className="service-img-container screen-lg">
-            <ServicesImage id="service-img2" />
+            <ServicesImage id="service-img4" />
           </div>
         </ServiceDescription>
       </Service>
