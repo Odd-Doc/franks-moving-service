@@ -13,7 +13,7 @@ export const Hero = () => {
   return (
     <>
       {" "}
-      <Container ref={container} className="container">
+      <Container id="home" ref={container} className="container">
         <FromTo from={{ x: "-1000px" }} to={{ x: "0", duration: "1.5" }}>
           <Header as="h1" content="Franks Relocation" />
         </FromTo>

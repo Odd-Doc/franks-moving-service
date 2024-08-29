@@ -60,17 +60,17 @@ const Home = () => {
           <Hero />
         </div>
         {/* <div ref={parallaxi}> */}
-        <div>
+        <div id="services">
           <Services />
         </div>
         <div>
           <ServiceDetails />
         </div>
-        <div>
+        <div id="about">
           <About />
         </div>
         <div>
-          <ContactMe />
+          <Footer />
         </div>
         {/* </div> */}
       </PageWrapper>
