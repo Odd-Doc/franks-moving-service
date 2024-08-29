@@ -55,7 +55,11 @@ export const QuoteModal = () => {
         onOpen={() => setFirstOpen(true)}
         open={firstOpen}
         trigger={
-          <Button size="huge" onClick={() => setFirstOpen(true)}>
+          <Button
+            size="huge"
+            color={(props) => props.theme.colors.burntsienna}
+            onClick={() => setFirstOpen(true)}
+          >
             Get a Quote
           </Button>
         }
