@@ -9,13 +9,14 @@ import { Hero } from "../../components/hero/hero";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SlideIn } from "../../components/Animations/slideIn";
 import { FromTo } from "../../components/Animations/fromToAnimate";
-import { QuoteModal } from "../../components/QuoteReq/GetAQuote";
+import { QuoteModalButton } from "../../components/modals/QuoteModal";
 import { ServiceDetails } from "../../components/service-details/services.details";
 import { Services } from "../../components/services/services";
+import QuoteModalPopUp from "../../components/modals/QuoteModalPopUp";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,6 +24,7 @@ const Home = () => {
   const parallaxi = useRef();
   const container = useRef();
   const quoteRef = useRef();
+  const [firstModalOpen, setFirstModalOpen] = useState(false);
   // useGSAP(() => {
   //   ScrollTrigger.refresh();
   //   [...parallaxi.current.children].forEach((child, i) => {
@@ -50,12 +52,22 @@ const Home = () => {
       <PageWrapper ref={container}>
         <QuoteRequestButton className="quote-button-slide">
           <FromTo
-            from={{ y: "10px", opacity: "0" }}
+            from={{ y: "200%", opacity: "0" }}
             to={{ y: "-100px", opacity: "1", duration: "1.5" }}
           >
-            <QuoteModal />
+            <QuoteModalButton setFirstModalOpen={setFirstModalOpen} />
           </FromTo>
         </QuoteRequestButton>
+        <div>
+          {firstModalOpen ? (
+            <QuoteModalPopUp
+              setFirstModalOpen={setFirstModalOpen}
+              open={firstModalOpen}
+            />
+          ) : (
+            ""
+          )}
+        </div>
         <div>
           <Hero />
         </div>

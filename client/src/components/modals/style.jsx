@@ -23,9 +23,4 @@ export const StyledForm = styled.form`
 
 export const ModalWrapper = styled.div`
   padding-bottom: 150px;
-  & #ii {
-    display: none !important;
-  }
-  .ui.huge.button {
-  }
 `;

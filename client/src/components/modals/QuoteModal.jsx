@@ -5,8 +5,8 @@ import { Input } from "semantic-ui-react";
 ////////////////////////////////////////////////////////////////////////
 // Modal Button
 ////////////////////////////////////////////////////////////////////////
-const ModalButton = () => {
-  return <button>Get a Quote</button>;
+const OpenModalButton = ({ setFirstModalOpen }) => {
+  return <button onClick={() => setFirstModalOpen(true)}>Get a Quote</button>;
 };
 
 ////////////////////////////////////////////////////////////////////////
@@ -25,8 +25,7 @@ const FormInput = ({ ...props }) => {
     />
   );
 };
-export const QuoteModal = () => {
-  const [open, setOpen] = useState(false);
+export const QuoteModalButton = ({ setFirstModalOpen }) => {
   const [firstOpen, setFirstOpen] = React.useState(false);
   const [secondOpen, setSecondOpen] = React.useState(false);
   const [fullName, setFullName] = useState("");
@@ -51,8 +50,10 @@ export const QuoteModal = () => {
     );
   };
   return (
-    <ModalWrapper>
-      <ModalButton></ModalButton>
-    </ModalWrapper>
+    <>
+      <ModalWrapper>
+        <OpenModalButton setFirstModalOpen={setFirstModalOpen} />
+      </ModalWrapper>
+    </>
   );
 };
