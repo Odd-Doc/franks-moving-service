@@ -24,3 +24,10 @@ export const StyledForm = styled.form`
 export const ModalWrapper = styled.div`
   padding-bottom: 150px;
 `;
+export const Container = styled.div`
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  z-index: 1;
+`;

@@ -1,15 +1,10 @@
-import React, { useRef, useState } from "react";
-import { ModalWrapper, StyledForm } from "./style";
+import React, { useContext, useRef, useState } from "react";
+import { Container } from "./style";
 import { Input } from "semantic-ui-react";
+import { QuoteModalContext } from "../../context/QuoteModalContext";
 
 ////////////////////////////////////////////////////////////////////////
-// Modal Button
-////////////////////////////////////////////////////////////////////////
-const OpenModalButton = ({ setFirstModalOpen }) => {
-  return <button onClick={() => setFirstModalOpen(true)}>Get a Quote</button>;
-};
-
-////////////////////////////////////////////////////////////////////////
+// Modal form input
 ////////////////////////////////////////////////////////////////////////
 const FormInput = ({ ...props }) => {
   return (
@@ -25,35 +20,57 @@ const FormInput = ({ ...props }) => {
     />
   );
 };
-export const QuoteModalButton = ({ setFirstModalOpen }) => {
-  const [firstOpen, setFirstOpen] = React.useState(false);
-  const [secondOpen, setSecondOpen] = React.useState(false);
-  const [fullName, setFullName] = useState("");
-  const [movingFrom, setMovingFrom] = useState("");
-  const [movingTo, setMovingTo] = useState("");
-  const [quoteEmail, setQuoteEmail] = useState("");
-  const handleNameChange = (e) => {
-    setFullName(e.target.value);
-  };
-  const handleMovingFrom = (e) => {
-    setMovingFrom(e.target.value);
-  };
-
-  const handleMovingTo = (e) => {
-    setMovingTo(e.target.value);
-  };
-  const onSubmit = (e) => {
-    e.preventDefault();
-    setSecondOpen(true);
-    console.log(
-      `name = ${fullName} | movingTo = ${movingTo} | movingFrom = ${movingFrom} `
-    );
-  };
+////////////////////////////////////////////////////////////////////////
+// Modal Button
+////////////////////////////////////////////////////////////////////////
+export const QuoteButton = () => {
+  const { firstModalOpen, setFirstModalOpen } = useContext(QuoteModalContext);
   return (
-    <>
-      <ModalWrapper>
-        <OpenModalButton setFirstModalOpen={setFirstModalOpen} />
-      </ModalWrapper>
-    </>
+    <button onClick={() => setFirstModalOpen(!firstModalOpen)}>
+      Get a Quote
+    </button>
+  );
+};
+
+////////////////////////////////////////////////////////////////////////
+// Modal popup
+////////////////////////////////////////////////////////////////////////
+export const QuoteModal = () => {
+  const { firstModalOpen, setFirstModalOpen } = useContext(QuoteModalContext);
+  const [secondModalOpen, setSecondModelOpen] = useState(false);
+  return (
+    <Container
+      onClick={() => {
+        setFirstModalOpen(!firstModalOpen);
+      }}
+    >
+      {secondModalOpen ? (
+        <div>
+          <h1>Second Modal</h1>
+        </div>
+      ) : (
+        <div>
+          <div>
+            <button
+              onClick={() => {
+                setFirstModalOpen(!firstModalOpen);
+              }}
+            >
+              Cancel
+            </button>
+          </div>
+          <div>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setSecondModelOpen(!secondModalOpen);
+              }}
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      )}
+    </Container>
   );
 };

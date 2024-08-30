@@ -10,6 +10,7 @@ export const FromTo = forwardRef(({ children, ...props }, ref) => {
     medium: 800,
     large: 1024,
   };
+  console.log(el.current);
 
   useGSAP(() => {
     let mm = gsap.matchMedia();
@@ -34,6 +35,7 @@ export const FromTo = forwardRef(({ children, ...props }, ref) => {
           props.from,
           props.to
         );
+
         // if (context.conditions.isDesktop) {
         //   console.clear();
         //   console.log("desktop");
@@ -47,7 +49,7 @@ export const FromTo = forwardRef(({ children, ...props }, ref) => {
       }
     );
     return () => mm.revert();
-  }, []);
+  });
 
   useGSAP(() => {
     // forward the animation instance

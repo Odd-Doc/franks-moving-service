@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const PageWrapper = styled.div``;
-export const QuoteRequestButton = styled.div`
+export const QuoteButtonContainer = styled.div`
   position: absolute;
   bottom: 0;
   display: flex;
