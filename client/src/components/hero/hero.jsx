@@ -17,7 +17,7 @@ export const Hero = () => {
       <Container id="home" ref={container} className="container">
         {firstModalOpen ? (
           <>
-            <Header as="h1" content="Franks Relocation" />
+            <Header as="h1" content="Frank's Relocation" />
 
             <Header as="h2">
               Moving made <span className="header-span">easy</span>, so you can
@@ -27,7 +27,7 @@ export const Hero = () => {
         ) : (
           <>
             <FromTo from={{ x: "-1000px" }} to={{ x: "0", duration: "1.5" }}>
-              <Header as="h1" content="Franks Relocation" />
+              <Header as="h1" content="Frank's Relocation" />
             </FromTo>
             <FromTo from={{ x: "1000px" }} to={{ x: "0", duration: "1.5" }}>
               <Header as="h2">
