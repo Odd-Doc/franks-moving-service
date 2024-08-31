@@ -38,9 +38,12 @@ export const StyledLink = styled(HashLink)`
 
   i {
     font-size: 5rem;
+
     ${mediaQuery.sm`
       
     `}
+  }
+  i:hover {
   }
   p {
     font-size: 1.5rem;
@@ -51,6 +54,7 @@ export const StyledLink = styled(HashLink)`
   }
   .fa-house {
     /* color: ${(props) => props.theme.colors.burntsienna}; */
+    color: #92a8ff;
   }
   .fa-building {
     color: ${(props) => props.theme.colors.persiangreen};

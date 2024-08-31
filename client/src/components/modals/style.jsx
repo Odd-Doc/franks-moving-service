@@ -28,6 +28,32 @@ export const Container = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
+  background-color: #000000b5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
-  z-index: 1;
+export const QuoteButtonContainer = styled.div`
+  display: ${(props) => (props.$firstModalOpen ? "none" : "block")};
+`;
+export const Modal = styled.div`
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  height: 300px;
+  padding: 1rem;
+  border-radius: 8px;
+`;
+export const ModalFooter = styled.div`
+  position: relative;
+  display: flex;
+`;
+export const ModalHeader = styled.div``;
+export const ModalContent = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
