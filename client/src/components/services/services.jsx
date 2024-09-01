@@ -18,15 +18,15 @@ export const Services = () => {
         <p className="service-summary">
           Our moving company offers a wide range of services to meet all your
           relocation needs, whether you're moving from your home, office, or
-          apartment. With 10 years of experience, our experienced team is here
-          to help every step of the way. We ensure a smooth and stress-free
-          moving experience, with no hidden fees and no stairway charges. From
-          packing to transportation, we've got you covered. We provide moving
-          blankets and shrink wrap at no additional cost. Let us take the heavy
-          lifting off your hands!
+          apartment. With 10 years of experience, our team is here to help every
+          step of the way. We ensure a smooth and stress-free moving experience,
+          with no hidden fees and no stairway charges. From packing to
+          transportation, we've got you covered. We provide moving blankets and
+          shrink wrap at no additional cost. Let us take the heavy lifting off
+          your hands!
         </p>
         <ServiceLinksWrapper>
-          <StyledLink smooth to={"#home"}>
+          <StyledLink smooth to={"#residential-service"}>
             <i className="fa-solid fa-house"></i>
             <p>Residental Moving</p>
           </StyledLink>
