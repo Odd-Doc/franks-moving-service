@@ -111,14 +111,14 @@ export const QuoteModal = () => {
           <ModalHeader>I'll get right back to you!</ModalHeader>
           <ModalFooter>
             <div>
-              <button
+              <Button
                 type="button"
                 onClick={() => {
                   setFirstModalOpen(!firstModalOpen);
                 }}
               >
                 Sound Good!
-              </button>
+              </Button>
             </div>
           </ModalFooter>
         </Modal>
