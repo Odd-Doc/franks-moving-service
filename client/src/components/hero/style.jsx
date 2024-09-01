@@ -18,9 +18,9 @@ export const Container = styled.div`
     font-family: "Montserrat", sans-serif;
   }
   h1.ui.header {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: "normal";
-    padding: 1rem;
+    padding: 3rem;
     margin: 0;
     color: white;
 
