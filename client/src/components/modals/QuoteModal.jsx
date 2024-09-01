@@ -1,4 +1,5 @@
 import React, { useContext, useRef, useState } from "react";
+
 import {
   Container,
   QuoteButtonContainer,
@@ -7,9 +8,10 @@ import {
   ModalHeader,
   ModalContent,
 } from "./style";
-import { Input } from "semantic-ui-react";
+import { Input, Form } from "semantic-ui-react";
 import { QuoteModalContext } from "../../context/QuoteModalContext";
 import emailjs from "@emailjs/browser";
+import { Button } from "../SharedComponents/Button";
 ////////////////////////////////////////////////////////////////////////
 // Modal form input
 ////////////////////////////////////////////////////////////////////////
@@ -35,9 +37,12 @@ export const QuoteButton = () => {
   const { firstModalOpen, setFirstModalOpen } = useContext(QuoteModalContext);
   return (
     <QuoteButtonContainer $firstModalOpen={firstModalOpen}>
-      <button onClick={() => setFirstModalOpen(!firstModalOpen)}>
+      <Button
+        style={{ backgroundColor: "#e76f51ff", color: "white" }}
+        onClick={() => setFirstModalOpen(!firstModalOpen)}
+      >
         Get a Quote
-      </button>
+      </Button>
     </QuoteButtonContainer>
   );
 };
@@ -71,6 +76,7 @@ export const QuoteModal = () => {
   const handleToAddress = (e) => {
     setToAddress(e.target.value);
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
@@ -93,6 +99,7 @@ export const QuoteModal = () => {
     setFromAddress();
     setToAddress();
   };
+
   return (
     <Container
       onClick={() => {
@@ -116,9 +123,9 @@ export const QuoteModal = () => {
           </ModalFooter>
         </Modal>
       ) : (
-        <form ref={form} onSubmit={(e) => handleSubmit(e)}>
+        <Form ref={form} onSubmit={(e) => handleSubmit(e)}>
           <Modal onClick={(e) => e.stopPropagation()}>
-            <ModalHeader>Header</ModalHeader>
+            <ModalHeader>Just need a few details</ModalHeader>
             <ModalContent>
               <div className="input">
                 <FormInput
@@ -164,7 +171,7 @@ export const QuoteModal = () => {
                   type="text"
                   name="fromAddress"
                   value={fromAddress}
-                  placeholder="Address you're moving from"
+                  placeholder="Moving from..."
                   className="from-zip"
                   onChange={handleFromAddress}
                   id="FromAddress"
@@ -177,7 +184,7 @@ export const QuoteModal = () => {
                   type="text"
                   name="toAddress"
                   value={toAddress}
-                  placeholder="Address you're moving to"
+                  placeholder="Moving to..."
                   className="To-zip"
                   onChange={handleToAddress}
                   id="ToAddress"
@@ -188,17 +195,7 @@ export const QuoteModal = () => {
             </ModalContent>
             <ModalFooter>
               <div>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setFirstModalOpen(!firstModalOpen);
-                  }}
-                >
-                  Cancel
-                </button>
-              </div>
-              <div>
-                <button
+                <Button
                   type="submit"
                   value="Send"
                   // onClick={(e) => {
@@ -207,11 +204,11 @@ export const QuoteModal = () => {
                   // }}
                 >
                   Submit
-                </button>
+                </Button>
               </div>
             </ModalFooter>
           </Modal>
-        </form>
+        </Form>
       )}
     </Container>
   );

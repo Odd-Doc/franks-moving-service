@@ -25,35 +25,47 @@ export const ModalWrapper = styled.div`
   padding-bottom: 150px;
 `;
 export const Container = styled.div`
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   background-color: #000000b5;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 `;
 
 export const QuoteButtonContainer = styled.div`
   display: ${(props) => (props.$firstModalOpen ? "none" : "block")};
 `;
 export const Modal = styled.div`
-  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  width: 300px;
-  height: 300px;
-  padding: 1rem;
+  /* background-color: ${(props) => props.theme.colors.burntsienna}; */
+  background-color: #2379b2;
+  color: white;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
   border-radius: 8px;
+  Button {
+    background-color: #42b542;
+    color: white;
+  }
 `;
 export const ModalFooter = styled.div`
-  position: relative;
   display: flex;
+  gap: 1rem;
+  padding-top: 1em;
 `;
-export const ModalHeader = styled.div``;
+export const ModalHeader = styled.div`
+  padding-bottom: 1rem;
+  font-size: 1.2em;
+`;
 export const ModalContent = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 `;

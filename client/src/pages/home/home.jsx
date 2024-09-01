@@ -50,7 +50,7 @@ const Home = () => {
         >
           <div>
             {" "}
-            <div>
+            <div className="modal-sticky-wrap">
               <QuoteModal />
               <div>
                 <QuoteButtonContainer className="quote-button-slide">
@@ -69,12 +69,6 @@ const Home = () => {
                       <QuoteButton />
                     </FromTo>
                   )}
-                  {/* <FromTo
-                from={{ y: "200%", opacity: "0" }}
-                to={{ y: "-100px", opacity: "1", duration: "1.5" }}
-              >
-                <QuoteButton />
-              </FromTo> */}
                 </QuoteButtonContainer>
 
                 <div>
@@ -93,7 +87,6 @@ const Home = () => {
                 <div>
                   <Footer />
                 </div>
-                {/* </div> */}
               </div>
             </div>
           </div>
@@ -119,12 +112,6 @@ const Home = () => {
                   <QuoteButton />
                 </FromTo>
               )}
-              {/* <FromTo
-                from={{ y: "200%", opacity: "0" }}
-                to={{ y: "-100px", opacity: "1", duration: "1.5" }}
-              >
-                <QuoteButton />
-              </FromTo> */}
             </QuoteButtonContainer>
 
             <div>
@@ -143,7 +130,6 @@ const Home = () => {
             <div>
               <Footer />
             </div>
-            {/* </div> */}
           </div>
         </QuoteModalContext.Provider>
       )}
