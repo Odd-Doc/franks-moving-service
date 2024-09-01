@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const PageWrapper = styled.div``;
+export const PageWrapper = styled.div`
+  overflow: hidden;
+`;
 export const QuoteButtonContainer = styled.div`
   position: absolute;
   bottom: 0;
