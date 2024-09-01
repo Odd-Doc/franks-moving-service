@@ -14,7 +14,7 @@ export const ServiceDetails = () => {
   return (
     <Container className="container">
       <Service>
-        <ServiceDescription>
+        <ServiceDescription id="residential-service">
           <div className="service-img-container">
             <ServicesImage id="service-img1" />
           </div>
@@ -31,7 +31,7 @@ export const ServiceDetails = () => {
         </ServiceDescription>
       </Service>
       <Service>
-        <ServiceDescription>
+        <ServiceDescription id="apartment-service">
           <div className="service-img-container screen-md">
             <ServicesImage id="service-img2" />
           </div>
@@ -59,7 +59,7 @@ export const ServiceDetails = () => {
         </ServiceDescription>
       </Service>
       <Service>
-        <ServiceDescription>
+        <ServiceDescription id="office-service">
           <div className="service-img-container">
             <ServicesImage id="service-img3" />
           </div>
@@ -74,7 +74,7 @@ export const ServiceDetails = () => {
         </ServiceDescription>
       </Service>
       <Service>
-        <ServiceDescription>
+        <ServiceDescription id="packing-service">
           <div className="service-img-container screen-md">
             <ServicesImage id="service-img4" />
           </div>

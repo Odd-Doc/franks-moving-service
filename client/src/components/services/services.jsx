@@ -26,29 +26,29 @@ export const Services = () => {
           lifting off your hands!
         </p>
         <ServiceLinksWrapper>
-          <StyledLink>
+          <StyledLink smooth to={"#home"}>
             <i className="fa-solid fa-house"></i>
             <p>Residental Moving</p>
           </StyledLink>
-          <StyledLink>
+          <StyledLink smooth to={"#apartment-service"}>
             <i className="fa-solid fa-building"></i>
             <p>Apartments</p>
           </StyledLink>
 
-          <StyledLink>
+          <StyledLink smooth to={"#office-service"}>
             <i className="fa-solid fa-dolly"></i>
             <p>Commercial Offices</p>
           </StyledLink>
 
-          <StyledLink>
+          <StyledLink smooth to={"#packing-service"}>
             <i className="fa-solid fa-boxes-packing"></i>
             <p>Packing</p>
           </StyledLink>
 
-          <StyledLink>
+          {/* <StyledLink smooth to={"#apartment-service"}>
             <i className="fa-solid fa-people-carry-box"></i>
             <p>Pickup and Delivery</p>
-          </StyledLink>
+          </StyledLink> */}
         </ServiceLinksWrapper>
       </Content>
     </Container>
