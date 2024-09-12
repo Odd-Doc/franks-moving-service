@@ -37,6 +37,16 @@ export const Container = styled.div`
 
 export const QuoteButtonContainer = styled.div`
   display: ${(props) => (props.$firstModalOpen ? "none" : "block")};
+  a {
+    :hover {
+      cursor: pointer;
+    }
+  }
+  .call-button {
+    margin-left: 1rem;
+    background-color: #42b542;
+    color: white;
+  }
 `;
 export const Modal = styled.div`
   display: flex;

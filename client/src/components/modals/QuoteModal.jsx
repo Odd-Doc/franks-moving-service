@@ -38,11 +38,20 @@ export const QuoteButton = () => {
   return (
     <QuoteButtonContainer $firstModalOpen={firstModalOpen}>
       <Button
-        style={{ backgroundColor: "#e76f51ff", color: "white" }}
+        style={{
+          backgroundColor: "#e76f51ff",
+          color: "white",
+          cursor: "pointer",
+        }}
         onClick={() => setFirstModalOpen(!firstModalOpen)}
       >
         Get a Quote
       </Button>
+      <a href="tel:+1 (214) 549-9482">
+        <Button className="call-button">
+          <i className="fa-solid fa-phone"></i> +1 (214) 549-9482
+        </Button>
+      </a>
     </QuoteButtonContainer>
   );
 };
